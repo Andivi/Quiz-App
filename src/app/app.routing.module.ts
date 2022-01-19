@@ -4,9 +4,14 @@ import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
 
 const routes: Routes = [
   {
-    path: '**',
+    path: 'home',
     pathMatch: 'full',
     loadChildren: () => import('./home/home.module').then( m => m.HomeModule)
+  },
+  {
+    path: 'category/:name',
+    pathMatch: 'full',
+    loadChildren: () => import('./question/question.module').then( m => m.QuestionModule)
   },
 ]
   

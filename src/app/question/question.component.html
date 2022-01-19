@@ -1,0 +1,30 @@
+<div class="container">
+    <div class="row" [formGroup] = "customize">
+        <div class="col-lg-4">
+            <select formControlName = "level" class="form-select" aria-label="Default select example">
+                <option selected>Open this select menu</option>
+                <option value="easy">Easy</option>
+                <option value="medium">Medium</option>
+                <option value="hard">Hard</option>
+              </select>
+        </div>
+        <div class="col-lg-4">
+            <select formControlName = "limit" class="form-select" aria-label="Default select example">
+                <option selected>Open this select menu</option>
+                <option value="10">10</option>
+                <option value="30">30</option>
+                <option value="50">50</option>
+              </select>
+        </div>
+        <div class="col-lg-4">
+            <button class = "btn btn-primary" (click)="getQuestions()">
+                Submit
+            </button>
+        </div>
+
+    </div>
+    <h4 class = "text-center">
+        Please, Answer All.
+    </h4>
+
+</div>

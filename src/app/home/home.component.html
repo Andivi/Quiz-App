@@ -12,13 +12,13 @@
       </h5>
   </div>
   <div class="row">
-      <div class="col-lg-4">
+      <div class="col-lg-4" *ngFor="let category of categories">
         <div class="card text-center">
            
             <div class="card-body">
-              <h4 class="card-title">Category</h4>
-              <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-              <a href="#" class="btn btn-primary">Take Quiz</a>
+              <h4 class="card-title">{{category?.name}}</h4>
+              <p class="card-text">{{category?.description}}.</p>
+              <a [routerLink]= "'/category/'+category.name" class="btn btn-primary">Take Quiz</a>
             </div>
            
           </div>
